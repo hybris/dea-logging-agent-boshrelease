@@ -1,0 +1,7 @@
+---
+name: hybris_dea_logging_agent
+
+dependencies: []
+
+files:
+  - deaagent/tollans_deagent_29042016_01

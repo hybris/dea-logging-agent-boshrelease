@@ -1,0 +1,7 @@
+{
+  "Index": <%= spec.index %>,
+  "MetronAddress": "<%= p("metron_endpoint.host") %>:<%= p("metron_endpoint.dropsonde_port") %>"
+  <% if_p("syslog_daemon_config") do |_| %>
+  , "Syslog": "vcap.Tollans_dea_logging_agent"
+  <% end %>
+}

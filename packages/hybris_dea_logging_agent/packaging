@@ -1,0 +1,4 @@
+set -e -x
+
+cp deaagent/tollans_deagent_* ${BOSH_INSTALL_TARGET}/deaagent
+chmod 755 ${BOSH_INSTALL_TARGET}/deaagent

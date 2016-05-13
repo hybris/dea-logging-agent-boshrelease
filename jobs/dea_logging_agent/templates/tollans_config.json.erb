@@ -1,0 +1,17 @@
+{
+  "Brokers": "<%= p("tollans.kafka.brokers") %>",
+  "Topic": "<%= p("tollans.kafka.topic") %>",
+  "Producer": {
+    "RequiredAcks": 0,
+    "Compression": 2,
+    "Return": {
+      "Successes": false,
+      "Errors": true
+    },
+    "Flush" : {
+      "Frequency": 500000000
+    }
+  },
+  "RiemannAddr" : "<%= p("riemann.host") %>:<%= p("riemann.port") %>",
+  "Origin": "<%= spec.index %>.<%= p("tollans.metric_origin") %>"
+}

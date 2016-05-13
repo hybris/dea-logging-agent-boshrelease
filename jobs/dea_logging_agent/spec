@@ -1,0 +1,31 @@
+---
+name: hybris_dea_logging_agent
+templates:
+  dea_logging_agent_ctl.erb: bin/dea_logging_agent_ctl
+  dea_logging_agent.json.erb: config/dea_logging_agent.json
+  tollans_config.json.erb:  config/tollans_config.json
+
+packages:
+- hybris_dea_logging_agent
+
+properties:
+  dea_logging_agent.debug:
+    description: boolean value to turn on verbose mode
+    default: false
+  metron_endpoint.host:
+    description: "The host used to emit messages to the Metron agent"
+    default: "127.0.0.1"
+  metron_endpoint.dropsonde_port:
+    description: "The port used to emit dropsonde messages to the Metron agent"
+    default: 3457
+  tollans.kafka.brokers:
+    description: "List of Kafka brokers to send to"
+  tollans.kafka.topic:
+    description: "Kafka topic to use by the agent"
+  riemann.host:
+    description: "Riemann hostname used to send agent metrics"
+  riemann.port:
+    description: "Riemann port used to send agent metrics"
+    default: 5555
+  tollans.metric_origin:
+    description: "Graphite structure of the agent metrics"
